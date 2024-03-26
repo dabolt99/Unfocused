@@ -8,12 +8,6 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] int health = 10;
     [SerializeField] public float speed = 5;
 
-    public enum PlayerMovementType { tf, physics };
-    [SerializeField] PlayerMovementType movementType = PlayerMovementType.tf;
-
-    [Header("Physics")]
-    [SerializeField] LayerMask groundMask;
-
     [Header("Flavor")]
     [SerializeField] string PlayerName = "Player";
     [SerializeField] private GameObject body;
@@ -40,42 +34,12 @@ public class PlayerScript : MonoBehaviour
     }
     public void MovePlayer(Vector3 direction)
     {
-        if (movementType == PlayerMovementType.tf)
-        {
-            MovePlayerTransform(direction);
-        }
-        else if (movementType == PlayerMovementType.physics)
-        {
-            MovePlayerRb(direction);
-        }
-
-
-    }
-
-    public void MovePlayerRb(Vector3 direction)
-    {
-        Vector3 currentVelocity = new Vector3(0, rb.velocity.y, 0);
-        rb.velocity = (currentVelocity) + (direction * speed);
-        /*if(rb.velocity.x<0){
-            body.transform.localScale = new Vector3(-1,1,1);
-        }
-        else(rb.velocity.x>0){
-            body.transform.localScale = new Vector3(1,1,1);
-        }*/
-        //rb.AddForce(direction * speed);
-        //rb.MovePosition(transform.position + (direction * speed * Time.deltaTime))
-    }
-
-    public void MovePlayerTransform(Vector3 direction)
-    {
         transform.position += direction * Time.deltaTime * speed;
     }
 
-    // public void Jump()
-    // {
-    //     if(Physics2D.OverlapCircleAll(transform.position + new Vector3(0,jumpOffset,0),jumpRadius,groundMask).Length > 0){
-    //         rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-    //     }
 
-    // }
+    public void PickupMaterials(){
+        MaterialsCount.singleton.RegisterMaterial();
+        //GetComponent<AudioSource>().Play();
+    }
 }

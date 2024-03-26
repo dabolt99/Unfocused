@@ -107,9 +107,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6868226263087676896}
   - component: {fileID: 8349606610545800115}
-  - component: {fileID: 4244619919444031378}
   - component: {fileID: 7225999495841171217}
   - component: {fileID: 3313272916866302115}
+  - component: {fileID: 7245995531102169116}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -177,7 +177,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 7482667652216324306, guid: 6ce9f64e1f30d8c4997860083dae552b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -185,27 +185,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4244619919444031378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8188487312480568596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54081d4921e790f47ae6b25fb05b48e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  speed: 5
-  movementType: 0
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  PlayerName: Player
-  body: {fileID: 1072982290049423927}
-  homePosition: {x: 0, y: 0, z: 0}
 --- !u!50 &7225999495841171217
 Rigidbody2D:
   serializedVersion: 4
@@ -262,9 +241,21 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: 0, y: -0.1}
+  m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &7245995531102169116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8188487312480568596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ab8fe4125338c4c9b1e4bb974a8be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
