@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
+    [SerializeField] PlayerScript player;
     public Transform foregroundTransform;
     public Transform catchupTransform;
     public float catchupSpeed = 1.0f;
 
-    [Range(0f,1f)]
-    public float percentage = 1f;
+    [Range(0f,1.0f)]
+    public float percentage = 1.0f;
 
     void Update()
     {

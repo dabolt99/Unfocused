@@ -9,6 +9,7 @@ public class MaterialSpawner : MonoBehaviour
     [SerializeField] private float spawnRangeY = 5.5f;
     [SerializeField] private float spawnRangeX = 11f;
     [SerializeField] private float spawnNumber = 20;
+    private int i = 0;
 
     void Start()
     {
@@ -20,10 +21,14 @@ public class MaterialSpawner : MonoBehaviour
         if(checkTOD.setTime == checkTOD.DayTime){
             SpawnMaterials();
         }
+        else{
+            i = 0;
+        }
     }
     void SpawnMaterials(){
-        for(int i = 0; i < spawnNumber; i++){
+        while(i < spawnNumber){
             SpawnMaterialsRandom();
+            i+=1;
         }
         
     }

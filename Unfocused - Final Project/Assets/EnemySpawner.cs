@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float spawnRangeY = 5.5f;
     [SerializeField] public float spawnNumber = 5;
+    private int i = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +22,16 @@ public class EnemySpawner : MonoBehaviour
         if(checkTOD.setTime != checkTOD.DayTime){
             SpawnEnemy();
         }
+        else{
+            i = 0;
+        }
+        
     }
 
     void SpawnEnemy(){
-        int i = 0;
         while(i < spawnNumber){
             SpawnEnemyRandom();
-            i++;
+            i+=1;
         }
         // StartCoroutine(SpawnEnemyRoutine());
         // IEnumerator SpawnEnemyRoutine(){
