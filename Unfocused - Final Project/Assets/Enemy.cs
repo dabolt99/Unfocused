@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
             other.GetComponent<PlayerScript>().HealthTracker(damage);
         }
     }
+
     void MovementCont(){
 
     }

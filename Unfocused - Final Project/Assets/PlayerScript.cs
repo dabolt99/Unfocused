@@ -52,6 +52,12 @@ public class PlayerScript : MonoBehaviour
         // else
         //     PlayerDeath();
     }
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.GetComponent<Enemy>() != null){
+            damage = other.GetComponent<Enemy>().damage;
+            HealthTracker(damage);
+        }
+    }
     public void PlayerDeath(){
 
     }
