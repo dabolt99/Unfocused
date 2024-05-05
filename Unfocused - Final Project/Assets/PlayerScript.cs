@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
 
     [Header("Tracked Data")]
     [SerializeField] Vector3 homePosition = Vector3.zero;
+    [SerializeField] private float acumulatedDamage = 0f;
 
     Rigidbody2D rb;
 
@@ -47,17 +48,15 @@ public class PlayerScript : MonoBehaviour
     }
     public void HealthTracker(float damage){
         if(currentHealth > 0){
-            bar.percentage = (currentHealth-damage)/maxHealth;
+            acumulatedDamage = acumulatedDamage + damage;
+            bar.percentage = (currentHealth-acumulatedDamage)/maxHealth;
         }
-        // else
+        else{
+            bar.percentage = (currentHealth-acumulatedDamage)/maxHealth;
         //     PlayerDeath();
-    }
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.GetComponent<Enemy>() != null){
-            damage = other.GetComponent<Enemy>().damage;
-            HealthTracker(damage);
         }
     }
+    
     public void PlayerDeath(){
 
     }

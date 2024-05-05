@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
         float randomY = Random.Range(-spawnRangeY,spawnRangeY);
 
         GameObject newEnemy = Instantiate(enemyPrefab,new Vector3(-11f, randomY, 0), Quaternion.identity);
-        //Destroy(newEnemy,10 * dropRate);
+        Destroy(newEnemy,checkTOD.nightTime);
 
     }
 }

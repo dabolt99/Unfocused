@@ -6,8 +6,9 @@ using Aoiti.Pathfinding;
 public class Enemy : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] public float damage = 1f;
+    [SerializeField] public float damage = 10f;
     [SerializeField] public float speed = 3f;
+    [SerializeField] public float damageCooldown = 2f;
     
     [Header("Pathfinder")]
     Pathfinder<Vector2> pathfinder; 
@@ -31,13 +32,17 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(checkTOD.setTime == checkTOD.DayTime){
-            Destroy(this.gameObject);
-        }
+        // if(checkTOD.setTime == checkTOD.DayTime){
+        //     Destroy(this.gameObject);
+        // }
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.GetComponent<PlayerScript>() != null){
             other.GetComponent<PlayerScript>().HealthTracker(damage);
+            for(int i = 0; i < damageCooldown * Time.deltaTime; i++){
+                damage = 0;
+            }
+            //other.GetComponent<PlayerScript>().DamageCooldown();
         }
     }
 
