@@ -33,13 +33,7 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemyRandom();
             i+=1;
         }
-        // StartCoroutine(SpawnEnemyRoutine());
-        // IEnumerator SpawnEnemyRoutine(){
-        //     while(i < spawnNumber){
-        //         SpawnEnemyRandom();
-        //         i++;
-        //     }
-        // }
+        
     }
 
     void SpawnEnemyRandom(){

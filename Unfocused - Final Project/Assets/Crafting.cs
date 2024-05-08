@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Crafting : MonoBehaviour
 {
     [SerializeField] MaterialsCount MCount;
-    [SerializeField] public float itemCost = 5f;
+    [SerializeField] public int itemCost = 5;
+    [SerializeField] private GameObject wallPrefab;
+    [SerializeField] private GameObject trapPrefab;
+    [SerializeField] private GameObject pitPrefab;
+    [SerializeField] public Vector3 mousePosition;
 
 
     // Start is called before the first frame update
@@ -17,15 +22,26 @@ public class Crafting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
-    void CraftWall(){
-        
+    public void CraftWall(){
+        if(MCount.materialsCollected > itemCost){
+            GameObject newWall = Instantiate(wallPrefab, mousePosition, Quaternion.identity);
+            MCount.materialsCollected = MCount.materialsCollected - itemCost;
+        }
     }
-    void CraftTrap(){
+    public void CraftTrap(){
         
+        if(MCount.materialsCollected > itemCost){
+            GameObject newTrap = Instantiate(trapPrefab, mousePosition, Quaternion.identity);
+            MCount.materialsCollected = MCount.materialsCollected - itemCost;
+        }
     }
-    void CraftPit(){
+    public void CraftPit(){
         
+        if(MCount.materialsCollected > itemCost){
+            GameObject newPit = Instantiate(pitPrefab, mousePosition, Quaternion.identity);
+            MCount.materialsCollected = MCount.materialsCollected - itemCost;
+        }
     }
 }

@@ -23,7 +23,7 @@ public class MaterialsCount : MonoBehaviour
 
     public void RegisterMaterial(){
         materialsCollected += 1;
-        MaterialsCountText.text = materialsCollected.ToString();
+        MaterialsCountText.text = (materialsCollected/2).ToString();
 
     }
 }

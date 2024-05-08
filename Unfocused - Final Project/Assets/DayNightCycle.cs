@@ -13,6 +13,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] public float nightTime = 8f;
     [SerializeField] public float timer;
     [SerializeField] public float minutes = 1f;
+    [SerializeField] public int count;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class DayNightCycle : MonoBehaviour
         }
         else if(setTime == CurrentTime.night){
             setTime = CurrentTime.day;
+            count++;
             StartTimer(dayTime);
         }
     }

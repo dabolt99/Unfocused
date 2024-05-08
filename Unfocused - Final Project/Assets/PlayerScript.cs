@@ -17,7 +17,9 @@ public class PlayerScript : MonoBehaviour
     //[SerializeField] private List<AnimationStateChanger> ;
 
     [Header("Tracked Data")]
+    public Transform playerTransform;
     [SerializeField] Vector3 homePosition = Vector3.zero;
+    [SerializeField] public Vector2 currentPosition;
     [SerializeField] private float acumulatedDamage = 0f;
 
     Rigidbody2D rb;
@@ -35,6 +37,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         HealthTracker(damage);
+        currentPosition = playerTransform.localPosition;
     }
     public void MovePlayer(Vector3 direction)
     {

@@ -20,4 +20,13 @@ public class Flashlight : MonoBehaviour
         transform.eulerAngles = new Vector3 (0, 0, angle);
 
     }
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.GetComponent<Enemy>() != null){
+            other.GetComponent<Enemy>().speed = 1;
+           
+
+            
+            //other.GetComponent<PlayerScript>().DamageCooldown();
+        }
+    }
 }
