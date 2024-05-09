@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] public float baseDamage = 10f;
     [SerializeField] public float damage = 0f;
     [SerializeField] public float speed = 3f;
-
+    [SerializeField] public float topSpeed = 3f;
     [SerializeField] public float damageCooldown = 2f;
     public Transform enemyTransform;
     [SerializeField] public Vector2 currentPosition;
@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damage = baseDamage;
         pathfinder = new Pathfinder<Vector2>(GetDistance, GetNeighbourNodes, 1000);
     }
 

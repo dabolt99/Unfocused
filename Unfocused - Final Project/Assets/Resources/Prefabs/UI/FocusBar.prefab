@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 69519439317069246}
   - component: {fileID: 1370511682695481779}
   - component: {fileID: 39378240661515391}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FrontBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4525936737735764413}
   - component: {fileID: 6215377238981211430}
   - component: {fileID: 6833475274768254824}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FocusBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

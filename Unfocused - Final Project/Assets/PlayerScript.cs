@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] Vector3 homePosition = Vector3.zero;
     [SerializeField] public Vector2 currentPosition;
     [SerializeField] private float acumulatedDamage = 0f;
+    [SerializeField] public PauseTime pause;
 
     Rigidbody2D rb;
 
@@ -31,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        pause.startTime();
     }
 
     // Update is called once per frame
@@ -46,21 +49,22 @@ public class PlayerScript : MonoBehaviour
 
 
     public void PickupMaterials(){
+        GetComponent<AudioSource>().Play();
         MaterialsCount.singleton.RegisterMaterial();
-        //GetComponent<AudioSource>().Play();
     }
     public void HealthTracker(float damage){
-        if(currentHealth > 0){
-            acumulatedDamage = acumulatedDamage + damage;
-            bar.percentage = (currentHealth-acumulatedDamage)/maxHealth;
-        }
-        else{
-            bar.percentage = (currentHealth-acumulatedDamage)/maxHealth;
-        //     PlayerDeath();
+        acumulatedDamage = acumulatedDamage + damage;
+        currentHealth = maxHealth - acumulatedDamage;
+        bar.percentage = currentHealth/maxHealth;
+        if(currentHealth < 0){
+            PlayerDeath("End Game");
         }
     }
     
-    public void PlayerDeath(){
-
+    public void PlayerDeath(string newScene = ""){
+        if(newScene != ""){
+                pause.stopTime();
+                SceneManager.LoadScene(newScene);                
+            }
     }
 }

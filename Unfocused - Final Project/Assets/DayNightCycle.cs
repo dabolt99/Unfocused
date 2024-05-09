@@ -10,14 +10,24 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] public CurrentTime DayTime = CurrentTime.day;
 
     [SerializeField] public float dayTime = 16f;
-    [SerializeField] public float nightTime = 8f;
+    public float nightTime;
     [SerializeField] public float timer;
-    [SerializeField] public float minutes = 1f;
+    [SerializeField] public float minutes = 30f;
     [SerializeField] public int count;
+
+    public static DayNightCycle singleton = null;
+
+    void Awake(){
+        DontDestroyOnLoad(this.gameObject);
+        if(singleton == null){
+            singleton = this;
+        }
+    }
     
     // Start is called before the first frame update
     void Start()
     {
+        nightTime = 24f - dayTime;
         if(setTime == CurrentTime.day){
             StartTimer(dayTime);
         }

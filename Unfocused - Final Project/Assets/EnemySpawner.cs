@@ -6,8 +6,9 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] public DayNightCycle checkTOD;
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private float spawnRangeY = 5.5f;
+    [SerializeField] private float spawnRangeY = 9.5f;
     [SerializeField] public float spawnNumber = 5;
+    [SerializeField] public float addSpawn = 5;
     private int i = 0;
 
     // Start is called before the first frame update
@@ -41,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
         float randomY = Random.Range(-spawnRangeY,spawnRangeY);
 
         GameObject newEnemy = Instantiate(enemyPrefab,new Vector3(-11f, randomY, 0), Quaternion.identity);
-        Destroy(newEnemy,checkTOD.nightTime);
+        Destroy(newEnemy,checkTOD.nightTime*checkTOD.minutes);
 
     }
 }

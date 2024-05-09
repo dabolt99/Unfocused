@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2632141002534520864}
   - component: {fileID: 3808604277520845904}
   - component: {fileID: 5098589388095216248}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 286550277152359390}
   - component: {fileID: 3197920141347599970}
   - component: {fileID: 1045195316883263399}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TrapText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6686131649667035077}
   - component: {fileID: 5350636220494486275}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MaterialsCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 8864223283096291113}
   - component: {fileID: 1994324673464025603}
   - component: {fileID: 4260764651853780066}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 3833469660991841273}
   - component: {fileID: 3003793574162713247}
   - component: {fileID: 7695750083342714214}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Materials Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 8614850667041670964}
   - component: {fileID: 8942290316019841305}
   - component: {fileID: 253941941673787002}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 7898140272774100002}
   - component: {fileID: 5541726647291508531}
   - component: {fileID: 985516739007954675}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WallText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 218260349884675578}
   - component: {fileID: 1984645849587917057}
   - component: {fileID: 3300579384395477328}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SideInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 4948450677010807327}
   - component: {fileID: 5833800888807060339}
   - component: {fileID: 4959909753424641251}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Crafting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,8 +977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchoredPosition: {x: -0.000022888184, y: -8.300003}
+  m_SizeDelta: {x: 159.95, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5833800888807060339
 CanvasRenderer:
@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 6525494683476510951}
   - component: {fileID: 2134366882850113614}
   - component: {fileID: 232281741366480371}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Materials
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 6114491725649987422}
   - component: {fileID: 5755057517029823790}
   - component: {fileID: 8689756792066104249}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1334,12 +1334,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: Crafting, Assembly-CSharp
+        m_MethodName: CraftWall
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 6095130603945186235}
   - component: {fileID: 8427131467814553141}
   - component: {fileID: 2913097453459088910}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Pit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,7 +1478,7 @@ GameObject:
   - component: {fileID: 7898665771266899505}
   - component: {fileID: 4615807129804612302}
   - component: {fileID: 265924552470765897}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 3409007912613695251}
   - component: {fileID: 7858116150152583404}
   - component: {fileID: 8346978633781774569}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 1864263499687084781}
   - component: {fileID: 6904285985389473208}
   - component: {fileID: 1326770940702691246}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}

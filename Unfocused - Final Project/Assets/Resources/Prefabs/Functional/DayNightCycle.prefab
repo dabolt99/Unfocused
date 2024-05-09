@@ -46,7 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setTime: 0
   DayTime: 0
-  dayTime: 16
+  dayTime: 12
   nightTime: 8
   timer: 0
   minutes: 1
+  count: 1

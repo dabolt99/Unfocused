@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3732385660462223839}
   - component: {fileID: 7304997227281658400}
   - component: {fileID: 148323230942939270}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Time Remaining
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2345396518967605210}
   - component: {fileID: 6572992300210022764}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TimeChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

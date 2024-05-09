@@ -6,9 +6,9 @@ public class MaterialSpawner : MonoBehaviour
 {
     [SerializeField] public DayNightCycle checkTOD;
     [SerializeField] private GameObject MaterialsPrefab;
-    [SerializeField] private float spawnRangeY = 5.5f;
+    [SerializeField] private float spawnRangeY = 9.5f;
     [SerializeField] private float spawnRangeX = 11f;
-    [SerializeField] private float spawnNumber = 20;
+    [SerializeField] private float spawnNumber = 100;
     private int i = 0;
 
     void Start()
@@ -35,7 +35,7 @@ public class MaterialSpawner : MonoBehaviour
 
     void SpawnMaterialsRandom(){
 
-        float randomX = Random.Range(-spawnRangeX,spawnRangeX);
+        float randomX = Random.Range(-spawnRangeX,spawnRangeX*5);
         float randomY = Random.Range(-spawnRangeY,spawnRangeY);
 
         GameObject newMaterials = Instantiate(MaterialsPrefab,new Vector3(randomX, randomY, 0), Quaternion.identity);

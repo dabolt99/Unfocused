@@ -17,13 +17,16 @@ public class MaterialsCount : MonoBehaviour
         singleton = this;
     }
 
-    void Start(){
-        
+    void Update(){
+        writeText();
     }
 
     public void RegisterMaterial(){
         materialsCollected += 1;
-        MaterialsCountText.text = (materialsCollected/2).ToString();
+        //writeText();
 
+    }
+    public void writeText(){
+        MaterialsCountText.text = (materialsCollected).ToString();
     }
 }

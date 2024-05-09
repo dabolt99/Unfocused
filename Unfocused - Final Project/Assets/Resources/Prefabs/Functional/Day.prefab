@@ -274,3 +274,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e64ce88062c5ca49aa8ecb88eb42a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkDays: {fileID: 0}
+  DaysText: {fileID: 8744271897912350934}
+--- !u!114 &8744271897912350934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 148323230942939270, guid: 99cb0aca6ee19154197a8c346c8ffa5e, type: 3}
+  m_PrefabInstance: {fileID: 8887598533410410576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,7 +11,7 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
-        childTransform.localPosition = new Vector3 (parentTransform.localPosition.x, parentTransform.localPosition.y, parentTransform.localPosition.z);
+        childTransform.localPosition = parentTransform.localPosition;
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mousePosition - transform.position;
@@ -23,10 +23,11 @@ public class Flashlight : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.GetComponent<Enemy>() != null){
             other.GetComponent<Enemy>().speed = 1;
-           
-
-            
-            //other.GetComponent<PlayerScript>().DamageCooldown();
+        }
+    }
+    void OnTriggerExit2D(Collider2D other){
+        if(other.GetComponent<Enemy>() != null){
+            other.GetComponent<Enemy>().speed = other.GetComponent<Enemy>().topSpeed;
         }
     }
 }

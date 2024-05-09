@@ -295,11 +295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ab8fe4125338c4c9b1e4bb974a8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 10
-  damage: 10
-  enemySpeed: 3
+  baseDamage: 1
+  damage: 1
+  speed: 3
+  topSpeed: 3
   damageCooldown: 2
-  player: {fileID: 0}
+  enemyTransform: {fileID: 6868226263087676896}
+  currentPosition: {x: 0, y: 0}
+  player: {fileID: 7633850588903095036, guid: 8c67d5baaecc94a4cbafadc4e57b4de5, type: 3}
   gridSize: 0.5
   obstacles:
     serializedVersion: 2

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EndGameHandler : MonoBehaviour
 {
+    [SerializeField] public AudioSource shutter;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,12 @@ public class EndGameHandler : MonoBehaviour
         
     }
     public void Retry(){
+        shutter.GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Main Menu");
     }
 
     public void Quit(){
+        shutter.GetComponent<AudioSource>().Play();
         Application.Quit();
     }
 }
